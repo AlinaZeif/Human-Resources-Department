@@ -45,10 +45,8 @@ class App extends Component {
 			</div>
 			<div className="row">
 				<div className="col s3"><EmployeeList employees={this.state.employees} updateCurrentEmployee={this.updateCurrentEmployee}/></div>
-				<div className="col s9"><EmployeeSingle employee={this.state.currentEmployee}/></div>
-			</div>
-			<div className="row">
-				<div className="col s12"><EmployeeForm employee={this.state.currentEmployee}/></div>
+            			<div className="col s3"><EmployeeSingle employee={this.state.currentEmployee}/></div>
+            			<div className="col s6"><EmployeeForm employee={this.state.currentEmployee}/></div>		
 			</div>
 		</div>
 	  );
