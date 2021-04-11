@@ -12,6 +12,7 @@ export class EmployeeForm extends Component {
         event.preventDefault();
 
         axios.post('http://localhost:4000/employees', {
+            image: this.refs.image.value,
             firstName: this.refs.firstName.value,
             lastName: this.refs.lastName.value,
             phone: this.refs.phone.value,
@@ -37,6 +38,7 @@ export class EmployeeForm extends Component {
     updateEmployee = (event) => {
         event.preventDefault();
         axios.put(`http://localhost:4000/employee/${this.props.employee._id}`, {
+            image: this.refs.image.value,
             firstName: this.refs.firstName.value,
             lastName: this.refs.lastName.value,
             phone: this.refs.phone.value,
@@ -56,7 +58,12 @@ export class EmployeeForm extends Component {
                 <h1 className="center">Add a new Employee</h1>
                 <form className="col s8" onSubmit={this.submitEmployee.bind(this)}>
                 <div className="col s6"></div>                  
-                    <div className="row"> 
+                    <div className="row">
+                        <div className="input-field col s6">
+                            <input placeholder="Image" id="image" ref="image" type="text" className="validate" />
+                            <label htmlFor="image">Image</label>
+                        </div>
+                        <div className="col s6"></div>
                         <div className="input-field col s6">
                             <input placeholder="First name" id="firstName" ref="firstName" type="text" className="validate" />
                             <label htmlFor="firstName">First Name</label>
@@ -66,8 +73,6 @@ export class EmployeeForm extends Component {
                             <input placeholder="Last name" id="lastName" ref="lastName" type="text" className="validate" />
                             <label htmlFor="lastName">Last Name</label>
                         </div>
-                    </div>
-                    <div className="row">
                         <div className="col s6"></div>
                         <div className="input-field col s6">
                             <input placeholder="Phone" id="phone" ref="phone" type="text" className="validate" />
