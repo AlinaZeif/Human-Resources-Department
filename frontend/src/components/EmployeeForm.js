@@ -84,11 +84,13 @@ export class EmployeeForm extends Component {
                             <label htmlFor="email">Email</label>
                         </div>
                     </div>
-                    <div className="col s7"></div>
-                    <button className="btn waves-effect waves-light" type="submit" name="action">Add employee</button>
-                    <button className="waves-effect waves-light btn" onClick={this.deleteEmployee.bind(this)}>Delete</button>
-                    <button className="waves-effect waves-light btn" onClick={this.updateEmployee.bind(this)}>Update</button>
-                    <div className="col s8"></div>
+                    <div className="row">
+                        <div className="col s7"></div>
+                        <button className="btn waves-effect waves-light" type="submit" name="action">Add</button>
+                        <button className="waves-effect waves-light btn" onClick={this.deleteEmployee.bind(this)}>Delete</button>
+                        <div className="col s8"></div>
+                        <button className="waves-effect waves-light btn" onClick={this.updateEmployee.bind(this)}>Update</button>
+                    </div>
                 </form>
             </div>
         );
