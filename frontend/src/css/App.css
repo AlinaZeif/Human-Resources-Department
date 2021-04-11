@@ -1,3 +1,6 @@
 button {
   margin: 3px;
 }
+.card-content {
+  line-height: 0.1em;
+} 
