@@ -1,6 +1,12 @@
 button {
   margin: 3px;
 }
+.card-image{
+  background-image: url("Силуэт.png");
+  background-repeat: no-repeat;
+  width: col s3;
+  height: 360px;
+}
 .card-content {
   line-height: 0.1em;
 } 
