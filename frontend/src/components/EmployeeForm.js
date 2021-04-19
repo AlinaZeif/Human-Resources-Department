@@ -48,51 +48,45 @@ export class EmployeeForm extends Component {
             console.log(response);
         })
         .catch((error) => console.error(error));
-        window.location.reload();
-        
+        window.location.reload(); 
     }
-
     render() {
         return (
-            <div className="row">
-                <h1 className="center">Add a new Employee</h1>
-                <form className="col s8" onSubmit={this.submitEmployee.bind(this)}>
-                <div className="col s6"></div>                  
-                    <div className="row">
-                        <div className="input-field col s6">
+            <div className="row" >
+                <h2 className="col s12 center" >Add a new Employee</h2>
+                    <div className="col s11 center" style={{marginLeft:20}} onSubmit={this.submitEmployee.bind(this)}>
+                    
+                        <div className="input-field">
                             <input placeholder="Image" id="image" ref="image" type="text" className="validate" />
                             <label htmlFor="image">Image</label>
                         </div>
-                        <div className="col s6"></div>
-                        <div className="input-field col s6">
+                        
+                        <div className="input-field">
                             <input placeholder="First name" id="firstName" ref="firstName" type="text" className="validate" />
                             <label htmlFor="firstName">First Name</label>
                         </div>
-                        <div className="col s6"></div>
-                        <div className="input-field col s6">
+                        
+                        <div className="input-field" >
                             <input placeholder="Last name" id="lastName" ref="lastName" type="text" className="validate" />
                             <label htmlFor="lastName">Last Name</label>
                         </div>
-                        <div className="col s6"></div>
-                        <div className="input-field col s6">
+                        
+                        <div className="input-field" >
                             <input placeholder="Phone" id="phone" ref="phone" type="text" className="validate" />
                             <label htmlFor="phone">Phone</label>
                         </div>
-                        <div className="col s6"></div>
-                        <div className="input-field col s6">
+                        
+                        <div className="input-field">
                             <input placeholder="Email" id="email"  ref="email" type="text" className="validate" />
                             <label htmlFor="email">Email</label>
                         </div>
+                        <div>
+                            <button className="btn waves-effect waves-light" type="submit" name="action">Add</button>
+                            <button className="waves-effect waves-light btn" onClick={this.deleteEmployee.bind(this)}>Delete</button>
+                            <button className="waves-effect waves-light btn" onClick={this.updateEmployee.bind(this)}>Update</button>
+                        </div>
                     </div>
-                    <div className="row">
-                        <div className="col s7"></div>
-                        <button className="btn waves-effect waves-light" type="submit" name="action">Add</button>
-                        <button className="waves-effect waves-light btn" onClick={this.deleteEmployee.bind(this)}>Delete</button>
-                        <div className="col s8"></div>
-                        <button className="waves-effect waves-light btn" onClick={this.updateEmployee.bind(this)}>Update</button>
-                    </div>
-                </form>
-            </div>
+            </div>    
         );
     }
 }
