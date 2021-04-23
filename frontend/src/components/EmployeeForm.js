@@ -57,27 +57,28 @@ export class EmployeeForm extends Component {
                     <div className="col s11 center" style={{marginLeft:20}} onSubmit={this.submitEmployee.bind(this)}>
                     
                         <div className="input-field">
-                            <input placeholder="Image" id="image" ref="image" type="text" className="validate" />
+                            <input placeholder="Image" id="image" value={this.props.employee.image} ref="image" type="text" className="validate" />
                             <label htmlFor="image">Image</label>
                         </div>
                         
                         <div className="input-field">
-                            <input placeholder="First name" id="firstName" ref="firstName" type="text" className="validate" />
+                            
+                            <input placeholder="First name" id="firstName" value={this.props.employee.firstName} ref="firstName" type="text" className="validate" />
                             <label htmlFor="firstName">First Name</label>
                         </div>
                         
                         <div className="input-field" >
-                            <input placeholder="Last name" id="lastName" ref="lastName" type="text" className="validate" />
+                            <input placeholder="Last name" id="lastName" value={this.props.employee.lastName} ref="lastName" type="text" className="validate" />
                             <label htmlFor="lastName">Last Name</label>
                         </div>
                         
                         <div className="input-field" >
-                            <input placeholder="Phone" id="phone" ref="phone" type="text" className="validate" />
+                            <input placeholder="Phone" id="phone" value={this.props.employee.phone} ref="phone" type="text" className="validate" />
                             <label htmlFor="phone">Phone</label>
                         </div>
                         
                         <div className="input-field">
-                            <input placeholder="Email" id="email"  ref="email" type="text" className="validate" />
+                            <input placeholder="Email" id="email" value={this.props.employee.email} ref="email" type="text" className="validate" />
                             <label htmlFor="email">Email</label>
                         </div>
                         <div>
