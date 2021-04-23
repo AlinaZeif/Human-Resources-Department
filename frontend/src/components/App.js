@@ -44,9 +44,9 @@ class App extends Component {
 				</nav>
 			</div>
 			<div className="row">
-				 <div className="col s3 m3 l3"><EmployeeList employees={this.state.employees} updateCurrentEmployee={this.updateCurrentEmployee}/></div>
-            			 <div className="col s6 m5 l3"><EmployeeSingle employee={this.state.currentEmployee}/></div>    
-            			 <div className="col s3 m4 l6"><EmployeeForm employee={this.state.currentEmployee}/></div>	
+				 <div className="col s12 m3 l3 xl3"><EmployeeList employees={this.state.employees} updateCurrentEmployee={this.updateCurrentEmployee}/></div>
+            			 <div className="col s12 m5 l3 xl3"><EmployeeSingle employee={this.state.currentEmployee}/></div>  
+                                 <div className="col s12 m4 l6 xl6"><EmployeeForm employee={this.state.currentEmployee} /></div>
 			</div>
 		</div>
 	  );
